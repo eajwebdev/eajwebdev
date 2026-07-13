@@ -1,0 +1,3 @@
+# esbuild must run its install script to fetch the platform binary, or Vite cannot start.
+allowBuilds:
+  esbuild: true
