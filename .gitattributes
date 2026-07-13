@@ -1,0 +1,3 @@
+# Server-side files must keep LF endings; CRLF breaks bash and Apache configs.
+*.sh text eol=lf
+.htaccess text eol=lf
