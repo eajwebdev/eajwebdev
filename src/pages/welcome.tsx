@@ -1,18 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {
-  Cpu,
-  Globe,
-  ShieldCheck,
-  Smartphone,
-  Cloud,
-  Code,
-  ChevronDown,
-  Laptop,
-  Monitor,
-  Server,
-  Tablet,
-} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InquiryModal from "@/components/InquiryModal";
@@ -22,59 +10,6 @@ import SystemPortfolioSection from "@/components/SystemPortfolioSection";
 import TeamSection from "@/components/TeamSection";
 import BusinessMindsetSection from "@/components/BusinessMindsetSection";
 import { useWelcomePage } from "@/hooks/useWelcomePage";
-import { type TeamMember, type TeamTab } from "@/types";
-
-const heroGadgetDecor = [
-  {
-    id: "laptop",
-    Icon: Laptop,
-    className: "left-[3%] top-[16%] hero-gadget-delay-1",
-    ring: "h-14 w-14 md:h-[4.75rem] md:w-[4.75rem]",
-    iconSize: 20,
-  },
-  {
-    id: "phone",
-    Icon: Smartphone,
-    className: "right-[4%] top-[22%] hero-gadget-delay-2",
-    ring: "h-12 w-12 md:h-[4.25rem] md:w-[4.25rem]",
-    iconSize: 18,
-  },
-  {
-    id: "monitor",
-    Icon: Monitor,
-    className: "left-[8%] bottom-[18%] hero-gadget-delay-3 hidden sm:block",
-    ring: "h-14 w-14 md:h-[4.5rem] md:w-[4.5rem]",
-    iconSize: 20,
-  },
-  {
-    id: "tablet",
-    Icon: Tablet,
-    className: "right-[7%] bottom-[24%] hero-gadget-delay-4 hidden sm:block",
-    ring: "h-12 w-12 md:h-16 md:w-16",
-    iconSize: 18,
-  },
-  {
-    id: "server",
-    Icon: Server,
-    className: "left-[18%] top-[42%] hero-gadget-delay-5 hidden md:block",
-    ring: "h-12 w-12 lg:h-14 lg:w-14",
-    iconSize: 17,
-  },
-  {
-    id: "cpu",
-    Icon: Cpu,
-    className: "right-[16%] top-[48%] hero-gadget-delay-6 hidden md:block",
-    ring: "h-12 w-12 lg:h-14 lg:w-14",
-    iconSize: 17,
-  },
-  {
-    id: "cloud",
-    Icon: Cloud,
-    className: "right-[22%] bottom-[14%] hero-gadget-delay-7 hidden lg:block",
-    ring: "h-11 w-11",
-    iconSize: 16,
-  },
-] as const;
 
 const heroCircleDecor = [
   {
@@ -90,27 +25,27 @@ const heroCircleDecor = [
   {
     id: "dot-1",
     className:
-      "hero-gadget hero-gadget-delay-2 absolute top-[14%] left-[22%] h-2.5 w-2.5 rounded-full border border-[#97215f]/25 bg-[#97215f]/15 md:h-3 md:w-3",
+      "hero-ring absolute top-[14%] left-[22%] h-2.5 w-2.5 rounded-full border border-[#97215f]/25 bg-[#97215f]/15 md:h-3 md:w-3",
   },
   {
     id: "dot-2",
     className:
-      "hero-gadget hero-gadget-delay-4 absolute top-[34%] right-[24%] h-2 w-2 rounded-full border border-[#1f2454]/20 bg-[#1f2454]/10",
+      "hero-ring absolute top-[34%] right-[24%] h-2 w-2 rounded-full border border-[#1f2454]/20 bg-[#1f2454]/10",
   },
   {
     id: "dot-3",
     className:
-      "hero-gadget hero-gadget-delay-6 absolute bottom-[30%] left-[28%] hidden h-2 w-2 rounded-full border border-[#97215f]/20 bg-white/80 sm:block",
+      "hero-ring absolute bottom-[30%] left-[28%] hidden h-2 w-2 rounded-full border border-[#97215f]/20 bg-white/80 sm:block",
   },
   {
     id: "hollow-1",
     className:
-      "hero-gadget hero-gadget-delay-3 absolute top-[12%] right-[18%] hidden h-10 w-10 rounded-full border border-dashed border-[#97215f]/18 md:block",
+      "hero-ring absolute top-[12%] right-[18%] hidden h-10 w-10 rounded-full border border-dashed border-[#97215f]/18 md:block",
   },
   {
     id: "hollow-2",
     className:
-      "hero-gadget hero-gadget-delay-5 absolute bottom-[12%] right-[30%] hidden h-8 w-8 rounded-full border border-[#d9d1de]/80 bg-white/30 lg:block",
+      "hero-ring absolute bottom-[12%] right-[30%] hidden h-8 w-8 rounded-full border border-[#d9d1de]/80 bg-white/30 lg:block",
   },
 ] as const;
 
@@ -137,24 +72,6 @@ export default function Welcome() {
             <div className="hero-ring absolute top-[46%] left-1/2 h-[min(72vw,28rem)] w-[min(72vw,28rem)] rounded-full border border-[#d9d1de]/55 [animation-delay:-3.5s]" />
             {heroCircleDecor.map((item) => (
               <div key={item.id} className={item.className} />
-            ))}
-            {heroGadgetDecor.map(({ id, Icon, className, ring, iconSize }) => (
-              <div
-                key={id}
-                className={`hero-gadget pointer-events-none absolute ${className}`}
-              >
-                <div
-                  className={`relative flex items-center justify-center rounded-full border border-[#d9d1de]/80 bg-white/65 shadow-md shadow-[#1f2454]/6 backdrop-blur-sm ${ring}`}
-                >
-                  <div className="absolute inset-1.5 rounded-full border border-[#97215f]/12 md:inset-2" />
-                  <Icon
-                    size={iconSize}
-                    strokeWidth={1.4}
-                    className="relative text-[#97215f]/50"
-                  />
-                </div>
-                <div className="absolute -inset-2 rounded-full border border-dashed border-[#97215f]/16 md:-inset-2.5" />
-              </div>
             ))}
           </div>
 
