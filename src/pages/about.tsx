@@ -6,8 +6,8 @@ import Footer from "@/components/Footer";
 
 export default function About() {
   useSEO({
-    title: "About Us - EAJ Web Development Services",
-    description: "Learn more about EAJ Web Development Services, a team of dedicated engineers and strategists building high-value custom systems and digital innovation backbones for Filipino brands.",
+    title: "About Us | EAJ Web Development Services",
+    description: "Learn about EAJ Web Development Services — a team of dedicated web developers, software engineers, and creative designers building custom web systems, ERP solutions, and digital tools for Philippine businesses and startups.",
     canonicalPath: "/about",
   });
 

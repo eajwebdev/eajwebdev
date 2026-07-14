@@ -20,8 +20,8 @@ export default function Services() {
   const sliderRef = useRef<HTMLDivElement>(null);
 
   useSEO({
-    title: "Services & IT Solutions - EAJ Web Development Services",
-    description: "Explore our IT services & digital innovations including Custom Web Apps, Mobile App Development, Cloud Infrastructure, APIs, Cybersecurity, and Consulting in the Philippines.",
+    title: "Services & IT Solutions | EAJ Web Development Services",
+    description: "Explore EAJ Web Development Services' full range of IT solutions including custom web apps, ERP systems, workflow automation, mobile app development, cloud infrastructure, APIs, and cybersecurity consulting in the Philippines.",
     canonicalPath: "/services",
   });
 

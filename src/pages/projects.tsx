@@ -6,8 +6,8 @@ import Footer from "@/components/Footer";
 
 export default function Projects() {
   useSEO({
-    title: "Projects & Portfolio - EAJ Web Development Services",
-    description: "Explore our portfolio of high-performance custom ERP systems, e-commerce suites, inventory systems, and operational dashboards built for scale.",
+    title: "Projects & Portfolio | EAJ Web Development Services",
+    description: "Explore EAJ Web Development Services' portfolio of custom-built web systems including HRIS portals, pharmacy management tools, laundry automation software, and operational dashboards deployed for Philippine businesses.",
     canonicalPath: "/projects",
   });
 

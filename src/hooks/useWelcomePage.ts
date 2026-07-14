@@ -5,8 +5,8 @@ export function useWelcomePage() {
   const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false);
 
   useSEO({
-    title: "EAJ Web Development Services - Modern Tech Systems for Filipino Founders",
-    description: "Custom ERP systems, workflow automation, and dashboard software custom-built for Filipino founders and businesses. Reclaim your time and scale your business.",
+    title: "EAJ Web Development Services | Custom Web Systems, ERP & Automation for Philippine Businesses",
+    description: "EAJ Web Development Services (eajwebdev) builds custom web systems, HRIS portals, pharmacy management tools, laundry automation software, workflow automation, and operational dashboards for Philippine businesses and startups. Scale your operations with tailor-made software.",
     canonicalPath: "/",
   });
 

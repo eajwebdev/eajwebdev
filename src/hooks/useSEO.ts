@@ -6,6 +6,9 @@ interface SEOProps {
   canonicalPath?: string;
 }
 
+const BRAND_NAME = "EAJ Web Development Services";
+const BASE_DOMAIN = "https://eajwebdev.com";
+
 export function useSEO({ title, description, canonicalPath }: SEOProps) {
   useEffect(() => {
     // 1. Update document title
@@ -38,7 +41,16 @@ export function useSEO({ title, description, canonicalPath }: SEOProps) {
     }
     ogTitle.setAttribute("content", title);
 
-    // 5. Update Twitter title
+    // 5. Update OpenGraph site name
+    let ogSiteName = document.querySelector('meta[property="og:site_name"]');
+    if (!ogSiteName) {
+      ogSiteName = document.createElement("meta");
+      ogSiteName.setAttribute("property", "og:site_name");
+      document.head.appendChild(ogSiteName);
+    }
+    ogSiteName.setAttribute("content", BRAND_NAME);
+
+    // 6. Update Twitter title
     let twitterTitle = document.querySelector('meta[name="twitter:title"]');
     if (!twitterTitle) {
       twitterTitle = document.createElement("meta");
@@ -47,7 +59,7 @@ export function useSEO({ title, description, canonicalPath }: SEOProps) {
     }
     twitterTitle.setAttribute("content", title);
 
-    // 6. Update Twitter description
+    // 7. Update Twitter description
     let twitterDesc = document.querySelector(
       'meta[name="twitter:description"]',
     );
@@ -58,10 +70,9 @@ export function useSEO({ title, description, canonicalPath }: SEOProps) {
     }
     twitterDesc.setAttribute("content", description);
 
-    // 7. Update Canonical Link
-    const baseDomain = "https://eajwebdev.com"; // Fallback/Default domain
+    // 8. Update Canonical Link
     const path = canonicalPath || window.location.pathname;
-    const fullCanonicalUrl = `${baseDomain}${path === "/" ? "" : path}`;
+    const fullCanonicalUrl = `${BASE_DOMAIN}${path === "/" ? "" : path}`;
 
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
