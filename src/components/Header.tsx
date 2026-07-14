@@ -94,7 +94,7 @@ export default function Header({ onGetStarted }: HeaderProps) {
       >
         <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6">
           <div className="flex flex-1 items-center">
-            <Link to="/" aria-label="EA Software Solutions home">
+            <Link to="/" aria-label="EAJ Web Development Services home">
               <BrandLogo size="sm" className="transition-transform hover:scale-[1.02]" />
             </Link>
           </div>

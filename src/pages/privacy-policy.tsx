@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 
 export default function PrivacyPolicy() {
   useSEO({
-    title: "Privacy Policy - EA Software Solutions",
-    description: "Read the Privacy Policy of EA Software Solutions to understand how we collect, store, and protect your user data and inquiries.",
+    title: "Privacy Policy - EAJ Web Development Services",
+    description: "Read the Privacy Policy of EAJ Web Development Services to understand how we collect, store, and protect your user data and inquiries.",
     canonicalPath: "/privacy-policy",
   });
 
@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
 
         <section className="mt-10 space-y-4 text-sm leading-relaxed text-[#5f5c7b] md:text-base">
           <p>
-            EA Software Solutions values your privacy. This page explains what information we
+            EAJ Web Development Services values your privacy. This page explains what information we
             collect, how we use it, and how we protect it when you use our website or contact us.
           </p>
           <p>

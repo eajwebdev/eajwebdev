@@ -14,7 +14,7 @@ export default function BrandLogo({ className = "", size = "sm" }: BrandLogoProp
   return (
     <img
       src="/eajicon.png"
-      alt="EA Software Solutions"
+      alt="EAJ Web Development Services"
       className={`w-auto ${style} ${className}`.trim()}
       draggable={false}
     />

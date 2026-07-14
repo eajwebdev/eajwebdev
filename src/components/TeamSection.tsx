@@ -14,11 +14,12 @@ const developmentTeam: TeamMember[] = [
   {
     name: "Joshua Kyle L. Dalmacio",
     role: "Senior Developer / System Administrator",
+    avatar: "/devs/joshua.jpg",
     portfolio: "/projects",
   },
   {
     name: "Mark Ian D. Dela Cruz",
-    role: "Junior Developer / Frontend & UX",
+    role: "Frontend Developer / Software Developer",
     avatar: "/devs/markian.jpg",
     portfolio: "https://mrkndlcrz.vercel.app/",
   },
@@ -34,6 +35,7 @@ const creativeTeam: TeamMember[] = [
   {
     name: "Michael A. Balivia",
     role: "Creative Designer & Marketing",
+    avatar: "/devs/michael.jpg",
     portfolio: "/projects",
   },
 ];
@@ -287,10 +289,18 @@ export default function TeamSection() {
                                   : "bottom-3 translate-y-0 text-left"
                               }`}
                             >
-                              <h4 className="text-lg leading-tight font-black text-white drop-shadow-md md:text-xl">
+                              <h4 className={`leading-tight font-black text-white drop-shadow-md transition-all duration-300 ${
+                                isExpanded
+                                  ? "text-sm md:text-base lg:text-lg xl:text-xl"
+                                  : "text-[10px] md:text-xs lg:text-sm xl:text-base"
+                              }`}>
                                 {member.name}
                               </h4>
-                              <p className="mt-0.5 text-xs text-white/90 md:text-sm">
+                              <p className={`mt-0.5 text-white/90 transition-all duration-300 ${
+                                isExpanded
+                                  ? "text-[9px] md:text-xs lg:text-sm"
+                                  : "text-[8px] md:text-[10px] lg:text-xs"
+                              }`}>
                                 {member.role}
                               </p>
                               {isExpanded &&

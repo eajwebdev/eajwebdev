@@ -1,13 +1,13 @@
 import { useSEO } from "@/hooks/useSEO";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Github } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function Projects() {
   useSEO({
-    title: "Projects & Portfolio - EA Software Solutions",
-    description: "Explore our portfolio of high-performance custom ERP systems, e-commerce suites, inventory systems, and operational dashboards built for scale.",
+    title: "Projects & Portfolio | EAJ Web Development Services",
+    description: "Explore EAJ Web Development Services' portfolio of custom-built web systems including HRIS portals, pharmacy management tools, laundry automation software, and operational dashboards deployed for Philippine businesses.",
     canonicalPath: "/projects",
   });
 
@@ -44,25 +44,28 @@ export default function Projects() {
         <div className="grid gap-12 md:gap-24">
           {[
             {
-              title: "Enterprise ERP System",
-              type: "Web Application",
-              desc: "A comprehensive resource planning system built for scale. Featuring real-time analytics, inventory management, and automated reporting.",
-              tech: ["React", "Laravel", "MySQL", "Tailwind"],
+              title: "HRIS Portal",
+              type: "HR & Payroll System",
+              desc: "A comprehensive Human Resource Information System to manage employee onboarding, time tracking, payroll computations, and leave requests effortlessly.",
+              tech: ["React", "Node.js", "MySQL", "TailwindCSS", "Automated Payroll"],
+              url: "https://hris.eajwebdev.com/",
               skeleton: "desktop",
             },
             {
-              title: "E-Commerce Mobile Suite",
-              type: "Mobile App",
-              desc: "Seamless shopping experience with lightning-fast performance and secure payment integrations for both iOS and Android.",
-              tech: ["React Native", "Node.js", "Redis", "AWS"],
-              skeleton: "mobile",
+              title: "Pharmacy System",
+              type: "Pharmacy Management",
+              desc: "An all-in-one pharmacy management tool for prescription filling, real-time inventory tracking, sales reporting, and automated stock alerts.",
+              tech: ["React", "Node.js", "MySQL", "TailwindCSS", "Inventory Tracking"],
+              url: "https://pharmacy.eajwebdev.com/",
+              skeleton: "tablet",
             },
             {
-              title: "Real-time Data Dashboard",
-              type: "Data Visualization",
-              desc: "Transforming complex data sets into actionable insights with interactive charts and automated alerting systems.",
-              tech: ["Next.js", "Python", "PostgreSQL", "D3.js"],
-              skeleton: "tablet",
+              title: "Laundry Automation",
+              type: "Laundry Management",
+              desc: "A modern laundry operations suite for managing customer drop-offs, tracking washing cycles, scheduling staff, and sending automatic pick-up notifications.",
+              tech: ["React", "Node.js", "MySQL", "TailwindCSS", "SMS Alerts", "Online Booking"],
+              url: "https://laundry.eajwebdev.com/",
+              skeleton: "mobile",
             },
           ].map((project, idx) => (
             <div
@@ -90,12 +93,14 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <button className="flex items-center gap-2 rounded-full bg-[#97215f] px-6 py-2 text-sm font-black text-white shadow-lg shadow-[#97215f]/20 transition-all hover:bg-[#7f1b50] active:scale-95">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#97215f] px-6 py-2.5 text-sm font-black text-white shadow-lg shadow-[#97215f]/20 transition-all hover:bg-[#7f1b50] active:scale-95 select-none"
+                  >
                     Live Preview
-                  </button>
-                  <button className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d9d1de] text-[#1f2454] transition-all hover:bg-[#ece7f2] active:scale-95">
-                    <Github size={20} />
-                  </button>
+                  </a>
                 </div>
               </div>
 

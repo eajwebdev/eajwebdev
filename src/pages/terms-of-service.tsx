@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 
 export default function TermsOfService() {
   useSEO({
-    title: "Terms of Service - EA Software Solutions",
-    description: "Read the Terms of Service governing the use of EA Software Solutions websites, custom ERP, and automation services.",
+    title: "Terms of Service - EAJ Web Development Services",
+    description: "Read the Terms of Service governing the use of EAJ Web Development Services websites, custom ERP, and automation services.",
     canonicalPath: "/terms-of-service",
   });
 
@@ -23,7 +23,7 @@ export default function TermsOfService() {
           </p>
           <p>
             All content on this website, including text, visuals, branding, and code samples, is
-            owned by or licensed to EA Software Solutions unless otherwise stated.
+            owned by or licensed to EAJ Web Development Services unless otherwise stated.
           </p>
           <p>
             Information presented on this website is for general business information and may be
