@@ -26,14 +26,14 @@ const developmentTeam: TeamMember[] = [
 
 const creativeTeam: TeamMember[] = [
   {
-    name: "Yobyob",
-    role: "Creative Designer",
+    name: "Gmar Palma",
+    role: "Creative Designer & Marketing",
     avatar: "/devs/Yobyob.jpg",
     portfolio: "/projects",
   },
   {
-    name: "Michael Bolivia",
-    role: "Creative Designer",
+    name: "Michael A. Balivia",
+    role: "Creative Designer & Marketing",
     portfolio: "/projects",
   },
 ];
@@ -119,7 +119,7 @@ export default function TeamSection() {
         scale: teamScale,
         y: teamY,
       }}
-      className="relative px-5 py-16 md:px-8 md:py-20 lg:py-28 bg-[#fcfbf9] rounded-t-[2.5rem] md:rounded-t-[4rem] border-t border-[#d9d1de]/30 -mt-16 md:-mt-24 shadow-[0_-20px_50px_rgba(31,36,84,0.06)] origin-top z-20 overflow-x-hidden"
+      className="relative px-5 py-16 md:px-8 md:py-20 lg:py-28 bg-[#fcfbf9] rounded-t-[2.5rem] md:rounded-t-[4rem] border-t border-[#d9d1de]/30 -mt-16 md:-mt-[100vh] shadow-[0_-20px_50px_rgba(31,36,84,0.06)] origin-top z-20 overflow-x-hidden"
     >
       <div className="relative z-10 mx-auto max-w-5xl">
         <div className="mb-9 text-center md:mb-12">
