@@ -6,8 +6,8 @@ import Footer from "@/components/Footer";
 
 export default function About() {
   useSEO({
-    title: "About Us - EA Software Solutions",
-    description: "Learn more about EA Software Solutions, a team of dedicated engineers and strategists building high-value custom systems and digital innovation backbones for Filipino brands.",
+    title: "About Us - EAJ Web Development Services",
+    description: "Learn more about EAJ Web Development Services, a team of dedicated engineers and strategists building high-value custom systems and digital innovation backbones for Filipino brands.",
     canonicalPath: "/about",
   });
 
@@ -48,7 +48,7 @@ export default function About() {
               Our Story
             </h2>
             <p className="leading-relaxed text-[#5f5c7b]">
-              EA Software Solutions started by supporting businesses with their
+              EAJ Web Development Services started by supporting businesses with their
               day-to-day IT needs. After years of seeing operational bottlenecks
               firsthand, we realized the real bridge to growth is not just better
               equipment, it is smarter systems.

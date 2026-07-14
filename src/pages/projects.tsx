@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 export default function Projects() {
   useSEO({
-    title: "Projects & Portfolio - EA Software Solutions",
+    title: "Projects & Portfolio - EAJ Web Development Services",
     description: "Explore our portfolio of high-performance custom ERP systems, e-commerce suites, inventory systems, and operational dashboards built for scale.",
     canonicalPath: "/projects",
   });

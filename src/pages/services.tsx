@@ -20,7 +20,7 @@ export default function Services() {
   const sliderRef = useRef<HTMLDivElement>(null);
 
   useSEO({
-    title: "Services & IT Solutions - EA Software Solutions",
+    title: "Services & IT Solutions - EAJ Web Development Services",
     description: "Explore our IT services & digital innovations including Custom Web Apps, Mobile App Development, Cloud Infrastructure, APIs, Cybersecurity, and Consulting in the Philippines.",
     canonicalPath: "/services",
   });

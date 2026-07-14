@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 
 export default function CookiePolicy() {
   useSEO({
-    title: "Cookie Policy - EA Software Solutions",
-    description: "Read the Cookie Policy of EA Software Solutions to understand how we use cookies and tracking technologies to improve our services.",
+    title: "Cookie Policy - EAJ Web Development Services",
+    description: "Read the Cookie Policy of EAJ Web Development Services to understand how we use cookies and tracking technologies to improve our services.",
     canonicalPath: "/cookie-policy",
   });
 

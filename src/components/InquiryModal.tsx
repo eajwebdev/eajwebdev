@@ -77,7 +77,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
         <div className="border-b border-[#d9d1de] px-4 pt-5 pb-4 sm:px-5">
           <p className="mb-1.5 flex items-center gap-2 text-[10px] font-bold tracking-[0.18em] text-[#97215f] uppercase">
             <span className="h-2 w-2 rounded-full bg-[#97215f]" />
-            EA Software Solutions
+            EAJ Web Development Services
           </p>
           <h2
             id="inquiry-modal-title"

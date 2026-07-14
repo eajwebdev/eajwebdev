@@ -150,7 +150,7 @@ export default function Welcome() {
           <div className="relative z-10 mx-auto max-w-2xl">
             <div className="mb-12 text-center">
               <h3 className="text-2xl font-black tracking-tight text-[#1f2454] sm:text-3xl md:text-4xl lg:text-5xl">
-                Why EA Software Solutions?
+                Why EAJ Web Development Services?
               </h3>
               <p className="mt-6 text-xs leading-relaxed text-[#5f5c7b] sm:text-sm md:text-base lg:text-lg">
                 We build the digital backbone of your business through precision
