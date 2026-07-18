@@ -91,10 +91,17 @@
     </script>
 
     <!-- Security Headers -->
+    @env('local')
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' http://localhost:5173 http://127.0.0.1:5173; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com http://localhost:5173 http://127.0.0.1:5173; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: http://localhost:5173 http://127.0.0.1:5173; connect-src 'self' https://formsubmit.co ws://localhost:5173 ws://127.0.0.1:5173 http://localhost:5173 http://127.0.0.1:5173; frame-ancestors 'none';"
+    />
+    @else
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://formsubmit.co; frame-ancestors 'none';"
     />
+    @endenv
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta
       http-equiv="Referrer-Policy"
@@ -107,6 +114,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    @viteReactRefresh
+    @vite(['resources/css/app.css', 'resources/js/main.tsx'])
   </body>
 </html>
